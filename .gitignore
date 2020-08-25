@@ -1,1 +1,4 @@
 /target
+/wasm_build
+/stremio_core_validator_bg.wasm
+/stremio_core_validator.js
