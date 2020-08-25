@@ -1,0 +1,16 @@
+[package]
+name = "stremio-core-validator"
+version = "0.1.0"
+authors = ["Smart Code Ltd."]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[dependencies]
+stremio-core = { git = "https://github.com/Stremio/stremio-core", branch = "development" }
+wasm-bindgen = { version = "0.2.65", features = ["serde-serialize"] }

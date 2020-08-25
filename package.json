@@ -1,0 +1,19 @@
+{
+    "name": "@stremio/stremio-core-validator",
+    "version": "0.1.0",
+    "description": "Stremio JSON Schema Validator",
+    "author": {
+        "name": "Smart Code Ltd.",
+        "email": "office@stremio.com",
+        "url": "https://stremio.com"
+    },
+    "main": "stremio_core_validator.js",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stremio/stremio-core-validator.git"
+    },
+    "scripts": {
+        "build": "./scripts/build.sh"
+    }
+}
