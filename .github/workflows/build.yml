@@ -1,0 +1,18 @@
+name: Build
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install rust toolchain
+      run: rustup toolchain install 1.45.0
+    - name: Set default rust toolchain
+      run: rustup default 1.45.0
+    - name: Install wasm-pack
+      run: cargo install wasm-pack
+    - name: Build
+      run: npm run build
