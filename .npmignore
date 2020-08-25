@@ -1,0 +1,7 @@
+/.github
+/scripts
+/src
+/target
+/wasm_build
+Cargo.lock
+Cargo.toml
