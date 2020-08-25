@@ -492,6 +492,7 @@ dependencies = [
 name = "stremio-core-validator"
 version = "0.1.0"
 dependencies = [
+ "serde",
  "stremio-core",
  "wasm-bindgen",
 ]

@@ -14,3 +14,4 @@ lto = true
 [dependencies]
 stremio-core = { git = "https://github.com/Stremio/stremio-core", branch = "development" }
 wasm-bindgen = { version = "0.2.65", features = ["serde-serialize"] }
+serde = "1.0"
