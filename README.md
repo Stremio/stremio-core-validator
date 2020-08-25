@@ -1,6 +1,8 @@
 # Stremio Core Validator
 
-Stremio JSON Schema Validator for Node.js
+Stremio JSON Schema Validator for Node.js using stremio-core types
+
+Additional properties that are not part of the schema got removed. Validation functions returns null if the argument does not match the schema.
 
 ## Build
 
@@ -8,12 +10,15 @@ Stremio JSON Schema Validator for Node.js
 npm run build
 ```
 
+## Supported types
+- Manifest
+- MetaPreview
+- MetaDetail
+- Stream
+
 ## Example
 
 ### MetaPreview validation
-
-`validator.meta_preview` returns null if the argument does not match the schema.
-Additional properties that are not part of the MetaPreview schema got removed.
 
 ```javascript
 const validator = require('@stremio/stremio-core-validator');
