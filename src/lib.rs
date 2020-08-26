@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 use stremio_core::types::addons::{Descriptor, DescriptorPreview, Manifest, ManifestPreview};
-use stremio_core::types::{MetaDetail, MetaPreview, Stream};
+use stremio_core::types::{MetaDetail, MetaPreview, Stream, SubtitlesSource};
 use wasm_bindgen::prelude::{wasm_bindgen, JsValue};
 
 fn validate<T: Serialize + for<'a> Deserialize<'a>>(data: &JsValue) -> JsValue {
@@ -40,4 +40,9 @@ pub fn meta_detail(data: &JsValue) -> JsValue {
 #[wasm_bindgen]
 pub fn stream(data: &JsValue) -> JsValue {
     validate::<Stream>(data)
+}
+
+#[wasm_bindgen]
+pub fn subtitles_source(data: &JsValue) -> JsValue {
+    validate::<SubtitlesSource>(data)
 }
