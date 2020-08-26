@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use stremio_core::types::addons::{Manifest, ManifestPreview};
+use stremio_core::types::addons::{Descriptor, DescriptorPreview, Manifest, ManifestPreview};
 use stremio_core::types::{MetaDetail, MetaPreview, Stream};
 use wasm_bindgen::prelude::{wasm_bindgen, JsValue};
 
@@ -15,6 +15,16 @@ pub fn manifest(data: &JsValue) -> JsValue {
 #[wasm_bindgen]
 pub fn manifest_preview(data: &JsValue) -> JsValue {
     validate::<ManifestPreview>(data)
+}
+
+#[wasm_bindgen]
+pub fn descriptor(data: &JsValue) -> JsValue {
+    validate::<Descriptor>(data)
+}
+
+#[wasm_bindgen]
+pub fn descriptor_preview(data: &JsValue) -> JsValue {
+    validate::<DescriptorPreview>(data)
 }
 
 #[wasm_bindgen]
