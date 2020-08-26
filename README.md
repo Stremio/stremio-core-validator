@@ -12,9 +12,14 @@ npm run build
 
 ## Supported types
 - Manifest
+- ManifestPreview
+- Descriptor
+- DescriptorPreview
 - MetaPreview
 - MetaDetail
 - Stream
+- SubtitlesSource
+- ResourceResponse
 
 ## Example
 
