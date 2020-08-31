@@ -15,19 +15,19 @@ npm run build
 - ManifestPreview
 - Descriptor
 - DescriptorPreview
-- MetaPreview
-- MetaDetail
+- MetaItem
+- MetaItemPreview
 - Stream
-- SubtitlesSource
+- Subtitles
 - ResourceResponse
 
 ## Example
 
-### MetaPreview validation
+### MetaItemPreview validation
 
 ```javascript
 const validator = require('@stremio/stremio-core-validator');
-const meta = validator.meta_preview({
+const meta = validator.meta_item_preview({
     id: 'id',
     type: 'type',
     name: 'name'
