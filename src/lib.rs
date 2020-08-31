@@ -1,8 +1,8 @@
 use serde::{Deserialize, Serialize};
-use stremio_core::types::addons::{
+use stremio_core::types::addon::{
     Descriptor, DescriptorPreview, Manifest, ManifestPreview, ResourceResponse,
 };
-use stremio_core::types::{MetaDetail, MetaPreview, Stream, SubtitlesSource};
+use stremio_core::types::resource::{MetaItem, MetaItemPreview, Stream, Subtitles};
 use wasm_bindgen::prelude::{wasm_bindgen, JsValue};
 
 fn validate<T: Serialize + for<'a> Deserialize<'a>>(data: &JsValue) -> JsValue {
@@ -30,13 +30,13 @@ pub fn descriptor_preview(data: &JsValue) -> JsValue {
 }
 
 #[wasm_bindgen]
-pub fn meta_preview(data: &JsValue) -> JsValue {
-    validate::<MetaPreview>(data)
+pub fn meta_item(data: &JsValue) -> JsValue {
+    validate::<MetaItem>(data)
 }
 
 #[wasm_bindgen]
-pub fn meta_detail(data: &JsValue) -> JsValue {
-    validate::<MetaDetail>(data)
+pub fn meta_item_preview(data: &JsValue) -> JsValue {
+    validate::<MetaItemPreview>(data)
 }
 
 #[wasm_bindgen]
@@ -45,8 +45,8 @@ pub fn stream(data: &JsValue) -> JsValue {
 }
 
 #[wasm_bindgen]
-pub fn subtitles_source(data: &JsValue) -> JsValue {
-    validate::<SubtitlesSource>(data)
+pub fn subtitles(data: &JsValue) -> JsValue {
+    validate::<Subtitles>(data)
 }
 
 #[wasm_bindgen]
