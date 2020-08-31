@@ -1,5 +1,7 @@
 # Stremio Core Validator
 
+![Build](https://github.com/stremio/stremio-core-validator/workflows/Build/badge.svg)
+
 Stremio JSON Schema Validator for Node.js using stremio-core types
 
 Additional properties that are not part of the schema got removed. Validation functions returns null if the argument does not match the schema.
