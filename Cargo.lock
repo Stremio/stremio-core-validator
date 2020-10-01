@@ -496,7 +496,7 @@ dependencies = [
 
 [[package]]
 name = "stremio-core-validator"
-version = "0.8.0"
+version = "0.9.0"
 dependencies = [
  "serde",
  "stremio-core",
