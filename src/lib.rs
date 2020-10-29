@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 use stremio_core::types::addon::{
     Descriptor, DescriptorPreview, Manifest, ManifestPreview, ResourceResponse,
 };
-use stremio_core::types::resource::{MetaItem, MetaItemPreview, Stream, Subtitles};
+use stremio_core::types::resource::{MetaItem, MetaItemPreview, Stream, Subtitles, Video};
 use wasm_bindgen::prelude::{wasm_bindgen, JsValue};
 
 fn validate<T: Serialize + for<'a> Deserialize<'a>>(data: &JsValue) -> Result<JsValue, JsValue> {
@@ -54,6 +54,11 @@ pub fn stream(data: &JsValue) -> Result<JsValue, JsValue> {
 #[wasm_bindgen]
 pub fn subtitles(data: &JsValue) -> Result<JsValue, JsValue> {
     validate::<Subtitles>(data)
+}
+
+#[wasm_bindgen]
+pub fn video(data: &JsValue) -> Result<JsValue, JsValue> {
+    validate::<Video>(data)
 }
 
 #[wasm_bindgen]
