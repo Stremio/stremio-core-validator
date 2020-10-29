@@ -7,11 +7,11 @@ use wasm_bindgen::prelude::{wasm_bindgen, JsValue};
 
 fn validate<T: Serialize + for<'a> Deserialize<'a>>(data: &JsValue) -> Result<JsValue, JsValue> {
     data.as_string()
-        .ok_or_else(|| JsValue::from_str("data is not a string"))
+        .ok_or_else(|| JsValue::from(js_sys::Error::new("data is not a string")))
         .and_then(|data| {
             let mut deserializer = serde_json::Deserializer::from_str(data.as_str());
             serde_path_to_error::deserialize::<_, T>(&mut deserializer)
-                .map_err(|error| JsValue::from_str(error.to_string().as_str()))
+                .map_err(|error| JsValue::from(js_sys::Error::new(error.to_string().as_str())))
                 .map(|data| JsValue::from_serde(&data).expect("data serialization failed"))
         })
 }
