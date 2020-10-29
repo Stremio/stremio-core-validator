@@ -4,7 +4,7 @@
 
 Stremio JSON Schema Validator for Node.js using stremio-core types
 
-Additional properties that are not part of the schema got removed. Validation functions returns null if the argument does not match the schema.
+Additional properties that are not part of the schema got removed. Validation functions throws error if the argument does not match the schema.
 
 ## Build
 
@@ -21,17 +21,37 @@ npm run build
 - MetaItemPreview
 - Stream
 - Subtitles
+- Video
 - ResourceResponse
 
 ## Example
 
 ### MetaItemPreview validation
 
+meta refers to javascript object with valid MetaItemPreview schema
+
 ```javascript
 const validator = require('@stremio/stremio-core-validator');
-const meta = validator.meta_item_preview({
+const meta = validator.meta_item_preview(JSON.stringify({
     id: 'id',
     type: 'type',
     name: 'name'
-});
+}));
+```
+
+### Cathing errors
+
+error refers to Error object with message describing which field is missing or invalid
+
+```javascript
+const validator = require('@stremio/stremio-core-validator');
+try {
+    const meta = validator.meta_item_preview(JSON.stringify({
+        id: 'id',
+        // type: 'type',
+        name: 'name'
+    }));
+} catch (error) {
+    console.log(error.message);
+}
 ```
