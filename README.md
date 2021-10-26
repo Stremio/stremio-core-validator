@@ -8,11 +8,12 @@ Additional properties that are not part of the schema got removed. Validation fu
 
 ## Build
 
-```
+```bash
 npm run build
 ```
 
 ## Supported types
+
 - Manifest
 - ManifestPreview
 - Descriptor
