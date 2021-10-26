@@ -14,5 +14,9 @@ jobs:
       run: rustup default 1.47.0
     - name: Install wasm-pack
       run: cargo install wasm-pack
+    - name: Install node_modules
+      run: npm install
     - name: Build
       run: npm run build
+    - name: Test
+      run: npm run test
