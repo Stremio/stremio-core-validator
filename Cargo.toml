@@ -1,6 +1,6 @@
 [package]
 name = "stremio-core-validator"
-version = "1.0.1"
+version = "2.0.0"
 authors = ["Smart Code OOD"]
 edition = "2018"
 

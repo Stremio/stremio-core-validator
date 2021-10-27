@@ -1,6 +1,6 @@
 {
     "name": "@stremio/stremio-core-validator",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "Stremio JSON Schema Validator",
     "author": "Smart Code OOD",
     "main": "stremio_core_validator.js",
