@@ -2,11 +2,11 @@ const validator = require('../stremio_core_validator');
 
 describe('meta', () => {
     it('MetaItemPreview', async () => {
-        const meta = validator.meta_item_preview(JSON.stringify({
+        const meta = validator.meta_item_preview({
             id: 'id',
             type: 'type',
             name: 'name'
-        }));
+        });
 
         expect(meta).toEqual({
             id: 'id',
