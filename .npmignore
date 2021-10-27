@@ -1,7 +1,9 @@
 /.github
 /scripts
 /src
+/tests
 /target
 /wasm_build
 Cargo.lock
 Cargo.toml
+README.md
