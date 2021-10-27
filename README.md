@@ -33,25 +33,25 @@ meta refers to javascript object with valid MetaItemPreview schema
 
 ```javascript
 const validator = require('@stremio/stremio-core-validator');
-const meta = validator.meta_item_preview(JSON.stringify({
+const meta = validator.meta_item_preview({
     id: 'id',
     type: 'type',
     name: 'name'
-}));
+});
 ```
 
 ### Cathing errors
 
-error refers to Error object with message describing which field is missing or invalid
+error refers to Error object with message describing which field is invalid
 
 ```javascript
 const validator = require('@stremio/stremio-core-validator');
 try {
-    const meta = validator.meta_item_preview(JSON.stringify({
+    const meta = validator.meta_item_preview({
         id: 'id',
         // type: 'type',
         name: 'name'
-    }));
+    });
 } catch (error) {
     console.log(error.message);
 }
