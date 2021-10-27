@@ -12,8 +12,8 @@ fn validate<T: Serialize + for<'a> Deserialize<'a>>(data: &JsValue) -> Result<Js
         .and_then(|data| {
             let mut deserializer = Deserializer::from_str(data.as_str());
             serde_path_to_error::deserialize::<_, T>(&mut deserializer)
-                .map_err(|error| JsValue::from(js_sys::Error::new(error.to_string().as_str())))
                 .map(|data| JsValue::from_serde(&data).expect("data serialization failed"))
+                .map_err(|error| JsValue::from(js_sys::Error::new(error.to_string().as_str())))
         })
 }
 
