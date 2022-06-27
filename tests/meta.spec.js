@@ -15,11 +15,13 @@ describe('meta', () => {
             description: null,
             logo: null,
             poster: null,
+            background: null,
             posterShape: 'poster',
             releaseInfo: null,
             released: null,
             runtime: null,
             trailerStreams: [],
+            links: [],
             behaviorHints: {
                 defaultVideoId: null,
                 featuredVideoId: null,
