@@ -9,9 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Setup NodeJS
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: 12
+        cache: 'npm'
         registry-url: https://registry.npmjs.org/
     - name: Checkout
       uses: actions/checkout@v2
