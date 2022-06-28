@@ -14,8 +14,6 @@ jobs:
         node-version: 12
         cache: 'npm'
         registry-url: https://registry.npmjs.org/
-    - name: Install rust toolchain
-      run: rustup toolchain install 1.61.0
     - name: Set default rust toolchain
       run: rustup default 1.61.0
     - name: Install wasm-pack
