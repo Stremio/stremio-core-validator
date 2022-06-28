@@ -703,7 +703,7 @@ dependencies = [
 
 [[package]]
 name = "stremio-core-validator"
-version = "2.0.1"
+version = "2.0.2"
 dependencies = [
  "js-sys",
  "serde",
